@@ -1,0 +1,152 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background: #22C1C3;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+header {
+    padding-block: 0.5em;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+}
+
+.contact-list {
+    list-style-type: none;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1220px;
+    padding-inline: 3em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.contact-list--item i {
+    margin-inline-end: 4px;
+}
+
+.contact-list--item a {
+    color: #000000;
+}
+
+main {
+    padding: 2em;
+    max-width: 1220px;
+    margin-inline: auto;
+}
+
+#intro-title {
+    font-size: 24px;
+    text-align: center;
+    margin-block-end: 0.3em;
+}
+.intro-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Introduction styles */
+.page-intro__container {
+    display: flex;
+    margin: 1em auto 0;
+    align-items: center;
+    gap: 5em;
+}
+
+.page-intro__container > * {
+    flex: 1;
+}
+.page-title {
+    font-size: 32px;
+}
+.page-description {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.image--wrapper {
+    flex: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    max-width: 240px;
+}
+
+.image--wrapper img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Services styles */
+.services__list--title {
+    width: 100%;
+}
+.services__list--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    gap: 1em;
+}
+
+.services__list {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.services__list-item:not(:last-child) {
+    margin-block-end: .3em;
+}
+
+/* Contacts styles */
+.opening-hours--wrapper {
+    margin-block: 2em;
+    font-size: 18px;
+}
+.opening-hours--wrapper p {
+    margin-block-end: 4px;
+}
+.opening-hours--wrapper a {
+    text-decoration: none;
+    color: #000000;
+}
+.opening-hours--wrapper span {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 0.5em;
+}
+
+@media (max-width: 1320px) {
+    main {
+        max-width: 990px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-list {
+        padding: 1em;
+    }
+    .page-intro__container {
+        flex-direction:column-reverse;
+        gap: 1em;
+    }
+    .services__list--wrapper {
+        margin-block-start: 2em;
+    }
+    .image--wrapper {
+        max-width: 120px;
+    }
+}
